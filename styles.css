@@ -14,25 +14,23 @@ h1 {
     display: flex;
     gap: 10px;
     text-align: center;
-}
-
-h2 {
-    color: #1b3644;
-    margin-top: 30px;
-}
-
-p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    color: #1b3644;
-}
-
-.header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     line-height: 1;
+}
+
+h2 {
+    color: #1b3644;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #1b3644;
+    display: inline-block;
 }
 
 .gallery {
@@ -45,7 +43,7 @@ p {
 }
 
 /* Image Styles */
-img {
+.gallery img {
     width: 20%;
     max-width: 350px;
     height: auto;
@@ -55,25 +53,11 @@ img {
     transition: transform 0.3s ease;
     align-items: center;
     justify-content: center;
+    object-fit: cover;
 }
 
-img:hover {
+.gallery img:hover {
     transform: scale(1.05);
-}
-
-/* List Styles */
-ul, ol {
-    text-align: left;
-    display: inline-block;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-li {
-    margin: 5px 0;
 }
 
 /* Footer Styles */
