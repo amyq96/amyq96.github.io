@@ -33,17 +33,61 @@ p {
     display: inline-block;
 }
 
-.gallery {
+/* Tabs container */
+.tabs {
     display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Tab buttons */
+.tab-link {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.5s ease;
+    font-size: 16px;
+}
+
+.tab-link:hover {
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.tab-link.active {
+    background: #1b3644;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Tab content */
+.tab-content {
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+
+/* Default active tab - ensures first tab content is visible by default when page loads */
+.tab-content:first-child {
+    display: block;
+}
+
+/* Gallery Image Styles */
+
+#gallery.tab-content {
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     padding: 20px;
     max-width: 1400px;
 }
-
-/* Image Styles */
-.gallery img {
+#gallery.tab-content img {
     width: 20%;
     max-width: 350px;
     height: auto;
@@ -56,7 +100,7 @@ p {
     object-fit: cover;
 }
 
-.gallery img:hover {
+#gallery.tab-content img:hover {
     transform: scale(1.05);
 }
 

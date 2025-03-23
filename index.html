@@ -26,20 +26,39 @@
     </style>
     <title>amy and duncan's foster cats</title>
 </head>
+
+<script src="script.js"></script>
+
 <body>
+    <div class="tabs">
+        <button class="tab-link" onclick="openTab(event, 'gallery')">Gallery</button>
+        <button class="tab-link" onclick="openTab(event, 'about')">About</button>
+        <button class="tab-link" onclick="openTab(event, 'contact')">Contact</button>
+    </div>
     <div class="header">
         <h1>amy and duncan's foster cats</h1>
         <p>a timeline of all the cats we've fostered</p>
-
-        <h2>cat gallery</h2>
     </div>
-    <div class="gallery">
+
+    <div id="gallery" class="tab-content">
+        <h2>cat gallery</h2>
         <img src="images/Bubbles and Lucy 1.jpg" alt="Bubbles and Lucy">
         <img src="images/Cookie 1.jpg" alt="Cookie">
         <img src="images/claudio.jpeg" alt="Claudio">
-    </div
+    </div>
+
+    <div id="about" class="tab-content" style="display: none;">
+        <h2>about us</h2>
+        <p>amy and duncan are a couple who have been fostering cats for the past 5 years. they have fostered over 50 cats and kittens in that time. they have a soft spot for senior cats and cats with special needs.</p>
+    </div>
+
+    <div id="contact" class="tab-content" style="display: none;">
+        <h2>contact us</h2>
+        <p>email: amyqin@gmail.com</p>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Cat Lover's Page</p>
+        <p>&copy; 2025 Cat Lover's Page</p>
     </footer>
 </body>
 </html>
