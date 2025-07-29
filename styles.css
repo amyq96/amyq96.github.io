@@ -23,7 +23,7 @@ h1 {
 
 h2 {
     color: #1b3644;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 p {
@@ -66,13 +66,10 @@ p {
 
 /* Tab content */
 .tab-content {
-    text-align: center;
-    padding: 20px;
     display: none;
 }
-
-/* Default active tab - ensures first tab content is visible by default when page loads */
-.tab-content:first-child {
+/* Default active tab - ensures first tab content div is visible by default when page loads */
+.tab-content.active {
     display: block;
 }
 
@@ -80,16 +77,17 @@ p {
 
 #gallery.tab-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* this stacks images vertically */
     flex-wrap: wrap;
     justify-content: center;
-    align-items: left;
+    align-items: center; /* centers images horizontally */
     padding: 20px;
     max-width: 1400px;
 }
 #gallery.tab-content img {
-    width: 20%;
-    max-width: 350px;
+    display: block; /* Ensures images don't align side by side */
+    width: 50%;
+    max-width: 550px;
     height: auto;
     margin: 10px;
     border-radius: 10px;
@@ -102,6 +100,22 @@ p {
 
 #gallery.tab-content img:hover {
     transform: scale(1.05);
+}
+
+#timeline {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+.step {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+    margin: 80px 0;
+}
+.step.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer Styles */

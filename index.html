@@ -25,36 +25,49 @@
         }
     </style>
     <title>amy and duncan's foster cats</title>
+
+    <div class="header">
+        <h1>amy and duncan's foster cats</h1>
+        <p>a timeline of all the cats we've fostered</p>
+    </div>
 </head>
 
 <script src="script.js"></script>
 
 <body>
     <div class="tabs">
-        <button class="tab-link" onclick="openTab(event, 'gallery')">Gallery</button>
+        <button class="tab-link active" onclick="openTab(event, 'gallery')">Gallery</button>
         <button class="tab-link" onclick="openTab(event, 'about')">About</button>
         <button class="tab-link" onclick="openTab(event, 'contact')">Contact</button>
     </div>
-    <div class="header">
-        <h1>amy and duncan's foster cats</h1>
-        <p>a timeline of all the cats we've fostered</p>
-    </div>
 
-    <div id="gallery" class="tab-content">
+    <div id="gallery" class="tab-content active">
         <h2>cat gallery</h2>
-        <img src="images/Bubbles and Lucy 1.jpg" alt="Bubbles and Lucy">
-        <img src="images/Cookie 1.jpg" alt="Cookie">
-        <img src="images/claudio.jpeg" alt="Claudio">
+    
+        <div id="timeline">
+            <section class="step" data-cat="Bubbles and Lucy">
+                <h3>January 2021 – Bubbles and Lucy</h3>
+                <p>Our first bonded pair. Sweet and shy.</p>
+                <img src="images/Bubbles and Lucy 1.jpg" alt="Bubbles and Lucy">
+            </section>
+    
+            <section class="step" data-cat="Cookie">
+                <h3>June 2021 – Cookie</h3>
+                <p>Playful and always hungry. Loved cuddles.</p>
+                <img src="images/Cookie 1.jpg" alt="Cookie">
+            </section>
+    
+            <section class="step" data-cat="Claudio">
+                <h3>December 2021 – Claudio</h3>
+                <p>A dignified senior cat with a loud purr.</p>
+                <img src="images/claudio.jpeg" alt="Claudio">
+            </section>
+        </div>
     </div>
 
     <div id="about" class="tab-content" style="display: none;">
         <h2>about us</h2>
         <p>amy and duncan are a couple who have been fostering cats for the past 5 years. they have fostered over 50 cats and kittens in that time. they have a soft spot for senior cats and cats with special needs.</p>
-    </div>
-
-    <div id="contact" class="tab-content" style="display: none;">
-        <h2>contact us</h2>
-        <p>email: amyqin@gmail.com</p>
     </div>
 
     <footer>

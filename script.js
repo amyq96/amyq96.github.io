@@ -1,14 +1,18 @@
-function openTab(event, tabName) {
-    let tabContent = document.getElementsByClassName("tab-content");
-    for (let i = 0; i < tabContent.length; i++) {
-        tabContent[i].style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+    const steps = document.querySelectorAll(".step");
+
+    function showVisibleSteps() {
+        const triggerPoint = window.innerHeight * 0.75;
+
+        steps.forEach(step => {
+            const rect = step.getBoundingClientRect();
+            if (rect.top < triggerPoint) {
+                step.classList.add("visible");
+            }
+        });
     }
 
-    let tabLinks = document.getElementsByClassName("tab-link");
-    for (let i = 0; i < tabLinks.length; i++) {
-        tabLinks[i].classList.remove("active");
-    }
+    window.addEventListener("scroll", showVisibleSteps);
+    showVisibleSteps(); // Run on load
+});
 
-    document.getElementById(tabName).style.display = "block";
-    event.currentTarget.classList.add("active");
-}
