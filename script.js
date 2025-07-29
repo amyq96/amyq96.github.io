@@ -1,18 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const steps = document.querySelectorAll(".step");
-
-    function showVisibleSteps() {
-        const triggerPoint = window.innerHeight * 0.75;
-
-        steps.forEach(step => {
-            const rect = step.getBoundingClientRect();
-            if (rect.top < triggerPoint) {
-                step.classList.add("visible");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", showVisibleSteps);
-    showVisibleSteps(); // Run on load
-});
+    const scroller = scrollama();
+    const graphicItems = document.querySelectorAll(".graphic-item");
+    const textSteps = document.querySelectorAll(".text-step");
+  
+    scroller
+      .setup({
+        step: ".graphic-item",
+        offset: 0.5,
+        debug: false
+      })
+      .onStepEnter(response => {
+        // Hide all text steps
+        textSteps.forEach(step => step.style.display = "none");
+  
+        // Show the matching one
+        const index = response.index;
+        document.getElementById(`text-step-${index}`).style.display = "block";
+      });
+  
+    window.addEventListener("resize", scroller.resize);
+  });
+  
 

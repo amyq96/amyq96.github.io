@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for mobile responsiveness -->
+    <script src="https://unpkg.com/scrollama"></script>
     <style>
         body {
             margin: 50px;
@@ -42,36 +43,44 @@
     </div>
 
     <div id="gallery" class="tab-content active">
-        <h2>cat gallery</h2>
-    
-        <div id="timeline">
-            <section class="step" data-cat="Bubbles and Lucy">
-                <h3>January 2021 – Bubbles and Lucy</h3>
+        <h2>cat gallery timeline</h2>
+      
+        <div class="scrolly-container">
+          <div class="scrolly-graphic">
+            <div class="graphic-item" data-step="0">
+              <img src="images/Bubbles and Lucy 1.jpg" alt="Bubbles and Lucy" />
+            </div>
+            <div class="graphic-item" data-step="1">
+              <img src="images/Cookie 1.jpg" alt="Cookie" />
+            </div>
+            <div class="graphic-item" data-step="2">
+              <img src="images/claudio.jpeg" alt="Claudio" />
+            </div>
+          </div>
+      
+          <div class="scrolly-text">
+            <div class="sticky-text">
+              <div class="text-step" id="text-step-0">
+                <h3>Bubbles and Lucy</h3>
                 <p>Our first bonded pair. Sweet and shy.</p>
-                <img src="images/Bubbles and Lucy 1.jpg" alt="Bubbles and Lucy">
-            </section>
-    
-            <section class="step" data-cat="Cookie">
-                <h3>June 2021 – Cookie</h3>
+              </div>
+              <div class="text-step" id="text-step-1" style="display: none;">
+                <h3>Cookie</h3>
                 <p>Playful and always hungry. Loved cuddles.</p>
-                <img src="images/Cookie 1.jpg" alt="Cookie">
-            </section>
-    
-            <section class="step" data-cat="Claudio">
-                <h3>December 2021 – Claudio</h3>
+              </div>
+              <div class="text-step" id="text-step-2" style="display: none;">
+                <h3>Claudio</h3>
                 <p>A dignified senior cat with a loud purr.</p>
-                <img src="images/claudio.jpeg" alt="Claudio">
-            </section>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
     <div id="about" class="tab-content" style="display: none;">
         <h2>about us</h2>
         <p>amy and duncan are a couple who have been fostering cats for the past 5 years. they have fostered over 50 cats and kittens in that time. they have a soft spot for senior cats and cats with special needs.</p>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Cat Lover's Page</p>
-    </footer>
 </body>
 </html>
